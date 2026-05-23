@@ -1,5 +1,9 @@
 # Explorer Sort - 资源管理器排序插件
 
+[![GitHub](https://img.shields.io/badge/GitHub-teze/explorer--sort-blue)](https://github.com/teze/explorer-sort)
+[![Version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/teze/explorer-sort/releases/tag/v1.0.0)
+[![License](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
+
 一个功能强大的 VS Code 资源管理器文件排序插件，提供多种排序方式和直观的用户界面。
 
 ## 功能特性
@@ -77,6 +81,12 @@ MIT
 ## 作者
 
 Fooyou  foyou0@gmail.com
+
+## 链接
+
+- **GitHub**: https://github.com/teze/explorer-sort
+- **问题反馈**: https://github.com/teze/explorer-sort/issues
+- **发布页面**: https://github.com/teze/explorer-sort/releases
 
 ## 反馈
 
