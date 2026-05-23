@@ -5,8 +5,17 @@
   "version": "1.0.0",
   "publisher": "fooyou",
   "author": {
-    "name": "Fooyou"
+    "name": "Fooyou",
+    "email": "foyou0@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teze/explorer-sort.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teze/explorer-sort/issues"
+  },
+  "homepage": "https://github.com/teze/explorer-sort#readme",
   "engines": {
     "vscode": "^1.80.0"
   },
