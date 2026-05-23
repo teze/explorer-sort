@@ -1,0 +1,101 @@
+{
+  "name": "explorer-sort",
+  "displayName": "Explorer Sort",
+  "description": "高级资源管理器文件排序插件，支持多种排序方式",
+  "version": "1.0.0",
+  "publisher": "fooyou",
+  "author": {
+    "name": "Fooyou"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "explorer-sort.showSortMenu",
+        "title": "文件排序",
+        "icon": "$(arrow-swap)"
+      },
+      {
+        "command": "explorer-sort.sortByName",
+        "title": "按名称排序"
+      },
+      {
+        "command": "explorer-sort.sortByType",
+        "title": "按类型排序"
+      },
+      {
+        "command": "explorer-sort.sortBySize",
+        "title": "按大小排序"
+      },
+      {
+        "command": "explorer-sort.sortByModified",
+        "title": "按修改时间排序"
+      },
+      {
+        "command": "explorer-sort.sortByCreated",
+        "title": "按创建时间排序"
+      },
+      {
+        "command": "explorer-sort.sortDefault",
+        "title": "默认排序"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "explorer-sort.showSortMenu",
+          "when": "view == workbench.explorer.fileView",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Explorer Sort",
+      "properties": {
+        "explorerSort.currentSortType": {
+          "type": "string",
+          "default": "default",
+          "enum": [
+            "default",
+            "name",
+            "type",
+            "size",
+            "modified",
+            "created"
+          ],
+          "description": "当前排序类型"
+        },
+        "explorerSort.foldersFirst": {
+          "type": "boolean",
+          "default": true,
+          "description": "文件夹优先显示"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
